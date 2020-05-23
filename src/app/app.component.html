@@ -1,0 +1,11 @@
+<mat-drawer-container>
+    <mat-drawer #drawer>
+        <app-sidenav-list (sidenavClose)="drawer.close()"></app-sidenav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header (sidenavToggle)="drawer.toggle()"></app-header>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-drawer-content>
+</mat-drawer-container>
