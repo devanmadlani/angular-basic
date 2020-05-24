@@ -1,6 +1,6 @@
-<section class="new-training" fxLayout fxLayoutAlign="center">
+<section class="new-order" fxLayout fxLayoutAlign="center">
     <mat-card fxFlex="100%" fxFlex.gt-xs="400px">
-        <mat-card-title fxLayoutAlign="center">Hello</mat-card-title>
+        <mat-card-title fxLayoutAlign="center">New Order</mat-card-title>
         <mat-card-content fxLayoutAlign="center">
             <mat-form-field>
                 <mat-label>Select an option</mat-label>
@@ -13,7 +13,7 @@
               </mat-form-field>
         </mat-card-content>
         <mat-card-actions fxLayoutAlign="center">
-            <button mat-button type="submit">click</button>
+            <button mat-button type="submit" (click)="openDialog()">Add</button>
         </mat-card-actions>
     </mat-card>
 </section>

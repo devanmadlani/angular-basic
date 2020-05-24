@@ -4,12 +4,13 @@
             <mat-icon>menu</mat-icon>
         </button>
     </div>
-    <button mat-button routerLink="/">home</button>
+    <button mat-button routerLink="/">LOGO</button>
     <div fxFlex fxLayout fxLayoutAlign="flex-end" class="basic-drawer-container__nav-links" fxHide.xs>
         <ul fxLayout fxLayoutGap="10px">
-            <li><a routerLink="/login">Login</a></li>
-            <li><a routerLink="/signup">Sign up</a></li>
-            <li><a routerLink="/training">Training</a></li>
+            <li *ngIf="isAuth"><a routerLink="/orders">Orders</a></li>
+            <li *ngIf="!isAuth"><a routerLink="/login">Login</a></li>
+            <li *ngIf="!isAuth"><a routerLink="/signup">signup</a></li>
+            <li *ngIf="isAuth"><a routerLink="/signup">Logout</a></li>
         </ul>
     </div>
 </mat-toolbar>

@@ -1,0 +1,5 @@
+<section class="app-loading" fxLayout="column" fxLayoutAlign="center center">
+    <mat-spinner></mat-spinner>
+    <h1 *ngIf="!loadingLabel">Loading...</h1>
+    <h1 *ngIf="loadingLabel">{{loadingLabel}}</h1>
+</section>

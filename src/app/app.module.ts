@@ -10,12 +10,15 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { SidenavListComponent } from './navigataion/sidenav-list/sidenav-list.component';
-import { HeaderComponent } from './navigataion/header/header.component';
-import { TrainingComponent } from './training/training.component';
-import { CurrentTrainingComponent } from './training/current-training/current-training.component';
-import { NewTrainingComponent } from './training/new-training/new-training.component';
-
+import { SidenavListComponent } from './shared/navigataion/sidenav-list/sidenav-list.component';
+import { HeaderComponent } from './shared/navigataion/header/header.component';
+import { OrdersComponent } from './orders/orders.component';
+import { NewOrderComponent } from './orders/new-order/new-order.component';
+import { OrderListComponent } from './orders/order-list/order-list.component';
+import { DialogComponent } from './shared/dialog/dialog.component';
+import { LoadingComponent } from './shared/loading/loading.component';
+import { DialogService } from './services/dialog.service';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,11 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
     WelcomeComponent,
     SidenavListComponent,
     HeaderComponent,
-    TrainingComponent,
-    CurrentTrainingComponent,
-    NewTrainingComponent,
+    OrdersComponent,
+    NewOrderComponent,
+    OrderListComponent,
+    DialogComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -38,7 +43,7 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
     FormsModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [DialogService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
