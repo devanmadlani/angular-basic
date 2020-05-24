@@ -8,7 +8,7 @@ module.exports = {
 	setupFilesAfterEnv: ['<rootDir>/src/test.ts'],
 	collectCoverage: true,
 	coverageReporters: ['html'],
-	coverageDirectory: 'coverage/angular-initializr',
+	coverageDirectory: 'coverage/angular-basic',
 	moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
 		prefix: '<rootDir>/',
 	}),
