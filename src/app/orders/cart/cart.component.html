@@ -1,0 +1,5 @@
+<div fxLayout fxLayoutAlign.gt-sm="end center" fxLayoutAlign="center center" class="order-action">
+    <button mat-stroked-button color="primary" (click)="submitOrder()">Submit Order</button>
+    <button mat-stroked-button color="warn">Cancel Order</button>
+</div>
+<app-table [data]="orders" [columns]="displayedColumns"></app-table>

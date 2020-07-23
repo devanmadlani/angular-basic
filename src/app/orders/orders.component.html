@@ -2,7 +2,10 @@
     <mat-tab label="New Order">
         <app-new-order></app-new-order>
     </mat-tab>
-    <mat-tab label="Order List">
-        <app-order-list></app-order-list>
+    <mat-tab>
+        <ng-template mat-tab-label >
+            <span [matBadge]="addedOrderLength" matBadgeColor="warn" matBadgeOverlap="false">Order List</span>
+          </ng-template>
+        <app-cart></app-cart>
     </mat-tab>
   </mat-tab-group>

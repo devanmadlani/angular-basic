@@ -8,11 +8,23 @@
         <span class="nav-caption">Login</span>
     </a>
     <a mat-list-item routerLink="/" *ngIf="isAuth" (click)="onSidenavClose()"> 
-        <mat-icon>face</mat-icon>
+        <mat-icon>dynamic_feed</mat-icon>
         <span class="nav-caption">Orders</span>
     </a>
+    <a mat-list-item routerLink="/" *ngIf="isAuth" (click)="onSidenavClose()"> 
+        <mat-icon>assignment_ind</mat-icon>
+        <span class="nav-caption">Customers</span>
+    </a>
+    <a mat-list-item routerLink="/view-requests" *ngIf="isAuth" (click)="onSidenavClose()"> 
+        <mat-icon>assignment</mat-icon>
+        <span class="nav-caption">Requests</span>
+    </a>
+    <a mat-list-item routerLink="/view-products" *ngIf="isAuth" (click)="onSidenavClose()"> 
+        <mat-icon>store</mat-icon>
+        <span class="nav-caption">Products</span>
+    </a>
     <a mat-list-item (click)="onLogout()"f="isAuth" (click)="onSidenavClose()"> 
-        <mat-icon>face</mat-icon>
+        <mat-icon>power_settings_new</mat-icon>
         <span class="nav-caption">Logout</span>
     </a>
  </mat-nav-list>
